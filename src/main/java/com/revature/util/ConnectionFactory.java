@@ -15,9 +15,9 @@ public class ConnectionFactory {
 	
 	public static Connection getConnection() {
 		try {
-			return DriverManager.getConnection(props.getProperty("jdbc.url"), 
-					props.getProperty("jdbc.username"), 
-					props.getProperty("jdbc.password"));
+			return DriverManager.getConnection(System.getenv("JDBC_URL"), 
+					System.getenv("JDBC_USERNAME"), 
+					System.getenv("JDBC_PASSWORD"));
 		} catch (SQLException e) {
 			System.err.println("Error Code: " + e.getErrorCode());
 			System.err.println("SQL State: " + e.getSQLState());
