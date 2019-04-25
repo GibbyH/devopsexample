@@ -15,6 +15,7 @@ public class ConnectionFactory {
 	
 	public static Connection getConnection() {
 		try {
+			Class.forName("oracle.jdbc.OracleDriver");
 			return DriverManager.getConnection(System.getenv("JDBC_URL"), 
 					System.getenv("JDBC_USERNAME"), 
 					System.getenv("JDBC_PASSWORD"));
@@ -22,7 +23,10 @@ public class ConnectionFactory {
 			System.err.println("Error Code: " + e.getErrorCode());
 			System.err.println("SQL State: " + e.getSQLState());
 			throw new RuntimeException("Failed to get database connection");
-		} 
+		} catch (ClassNotFoundException e) {
+			System.err.println(e);
+			throw new RuntimeException("Failed to get driver class.");
+		}
 	}
 	
 	private static Properties getJdbcProperties() {
