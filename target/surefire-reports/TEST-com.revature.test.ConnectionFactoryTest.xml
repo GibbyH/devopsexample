@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.revature.test.ConnectionFactoryTest" time="1.324" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.revature.test.ConnectionFactoryTest" time="0.97" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\jdk1.8.0_201\jre\bin"/>
@@ -65,5 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase classname="com.revature.test.ConnectionFactoryTest" name="connectionFactory_ShouldProduceCalidConnection" time="1.324"/>
+  <testcase classname="com.revature.test.ConnectionFactoryTest" name="connectionFactory_ShouldProduceCalidConnection" time="0.97"/>
 </testsuite>
